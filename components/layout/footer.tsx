@@ -24,8 +24,8 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
               <li>info@safarimara.com</li>
-              <li>+254 700 000 000</li>
-              <li>Nairobi, Kenya</li>
+              <li>+254 768871004</li>
+              <li>Mombasa, Kenya</li>
             </ul>
           </div>
           <div>
