@@ -47,7 +47,7 @@ export function MainNav() {
 
   const navItems = [
     { href: "/", label: "Home", icon: <Compass className="w-4 h-4" /> },
-    { href: "/gallery", label: "Gallery", icon: <Camera className="w-4 h-4" /> },
+    { href: "/gallary", label: "Gallery", icon: <Camera className="w-4 h-4" /> },
     { href: "/booking", label: "Book Now", icon: <BookOpen className="w-4 h-4" /> },
     { href: "/contact", label: "Contact", icon: <Phone className="w-4 h-4" /> },
   ];
