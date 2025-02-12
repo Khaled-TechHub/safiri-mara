@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const experiences = [
   {
@@ -47,9 +48,11 @@ export function RecommendedSection() {
                   <p className="text-sm opacity-90">{exp.location}</p>
                   <div className="flex justify-between items-center mt-2">
                     <span className="font-bold">${exp.price}</span>
-                    <Button size="sm" variant="secondary">
-                      Book Trip
-                    </Button>
+                    <Link href="/booking">
+                      <Button size="sm" variant="secondary">
+                        Book Trip
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>

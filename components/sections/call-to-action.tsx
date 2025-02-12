@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function CallToAction() {
   return (
@@ -18,9 +19,11 @@ export function CallToAction() {
         <p className="text-xl text-white/90 mb-8">
           Connect with SafiriMara today to start planning your dream safari.
         </p>
-        <Button size="lg" className="bg-white text-black hover:bg-white/90">
-          Start Planning
-        </Button>
+        <Link href="/booking">
+          <Button size="lg" className="bg-white text-black hover:bg-white/90">
+            Start Planning
+          </Button>
+        </Link>
       </div>
     </section>
   );

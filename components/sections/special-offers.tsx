@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 const offers = [
   {
@@ -33,7 +34,9 @@ export function SpecialOffers() {
             <h2 className="text-3xl font-bold mb-2">Limited Time Offer</h2>
             <p className="text-gray-600">Book Now and Save Big!</p>
           </div>
-          <Button variant="outline">View All</Button>
+          <Link href="/booking">
+            <Button variant="outline">View All</Button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -51,7 +54,9 @@ export function SpecialOffers() {
                 <p className="text-gray-600 mb-4">{offer.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-2xl font-bold">${offer.price}</span>
-                  <Button>Book Now</Button>
+                  <Link href="/booking">
+                    <Button>Book Now</Button>
+                  </Link>
                 </div>
               </div>
             </Card>

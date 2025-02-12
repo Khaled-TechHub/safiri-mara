@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function BestEvents() {
   return (
@@ -18,9 +19,11 @@ export function BestEvents() {
               Witness one of nature's most spectacular events as millions of wildebeest 
               cross the Mara River in their annual migration.
             </p>
-            <Button className="bg-white text-black hover:bg-white/90">
-              Book Now
-            </Button>
+            <Link href="/booking">
+              <Button className="bg-white text-black hover:bg-white/90">
+                Book Now
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

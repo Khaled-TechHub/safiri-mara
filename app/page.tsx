@@ -13,6 +13,7 @@ import { BestEvents } from "@/components/sections/best-events";
 import { RecommendedSection } from "@/components/sections/recommended-section";
 import { CallToAction } from "@/components/sections/call-to-action";
 import { Footer } from "@/components/layout/footer";
+import Link from "next/link";
 
 const heroSlides = [
   {
@@ -78,9 +79,11 @@ export default function Home() {
                 <p className="text-white/90 text-lg mb-8 max-w-xl">
                   {heroSlides[currentSlide].subtitle}
                 </p>
-                <Button className="w-full sm:w-auto bg-white text-black hover:bg-white/90 px-8 py-6 text-lg">
-                  Book Now
-                </Button>
+                <Link href="/booking">
+                  <Button className="w-full sm:w-auto bg-white text-black hover:bg-white/90 px-8 py-6 text-lg">
+                    Book Now
+                  </Button>
+                </Link>
               </div>
             </div>
 
