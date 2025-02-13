@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Instagram, Facebook, Twitter, MessageCircle, Youtube } from "lucide-react";
 
 export function Footer() {
   return (
@@ -24,8 +25,8 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
               <li>info@safarimara.com</li>
-              <li>+254 768871004</li>
-              <li>Mombasa, Kenya</li>
+              <li>+254 700 000 000</li>
+              <li>Nairobi, Kenya</li>
             </ul>
           </div>
           <div>
@@ -45,8 +46,59 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-white/10 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 SafariMara. All rights reserved.</p>
+
+        {/* Social Media Icons */}
+        <div className="border-t border-white/10 mt-8 pt-8">
+          <div className="flex flex-col items-center space-y-4">
+            <div className="flex items-center justify-center space-x-6">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#E4405F] hover:text-[#E4405F]/80 transition-colors"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="w-6 h-6" strokeWidth={2.5} />
+              </a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1877F2] hover:text-[#1877F2]/80 transition-colors"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook className="w-6 h-6" strokeWidth={2.5} />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1DA1F2] hover:text-[#1DA1F2]/80 transition-colors"
+                aria-label="Follow us on Twitter"
+              >
+                <Twitter className="w-6 h-6" strokeWidth={2.5} />
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#FF0000] hover:text-[#FF0000]/80 transition-colors"
+                aria-label="Follow us on YouTube"
+              >
+                <Youtube className="w-6 h-6" strokeWidth={2.5} />
+              </a>
+              <a
+                href="https://wa.me/254768871004"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#25D366] hover:text-[#25D366]/80 transition-colors"
+                aria-label="Contact us on WhatsApp"
+              >
+                <MessageCircle className="w-6 h-6" strokeWidth={2.5} />
+              </a>
+            </div>
+            <p className="text-gray-400">&copy; 2024 SafariMara. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
