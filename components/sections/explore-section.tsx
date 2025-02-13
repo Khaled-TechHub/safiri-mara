@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function ExploreSection() {
   return (
@@ -8,13 +9,16 @@ export function ExploreSection() {
           <div>
             <h2 className="text-3xl font-bold mb-4">Let's Explore Together</h2>
             <p className="text-gray-600 mb-6">
-              Join us on an unforgettable journey through the Masai Mara, where every 
-              moment brings new discoveries and lasting memories. Our expert guides 
-              will ensure you experience the best of African wildlife and culture.
+              Join us on an unforgettable journey through the Masai Mara, where
+              every moment brings new discoveries and lasting memories. Our
+              expert guides will ensure you experience the best of African
+              wildlife and culture.
             </p>
-            <Button variant="outline" className="text-lg px-8">
-              Learn More
-            </Button>
+            <Link href="/service" passHref>
+              <Button asChild variant="outline" className="text-lg px-8">
+                <span>Learn More</span>
+              </Button>
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img
