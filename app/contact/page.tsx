@@ -7,8 +7,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Instagram,
   Facebook,
@@ -239,33 +245,41 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     <Label htmlFor="teamSize">Group size</Label>
                     <Select
-                      value={formData.teamSize}
+                      value={formData.location}
                       onValueChange={(value) =>
-                        setFormData({ ...formData, teamSize: value })
+                        setFormData({ ...formData, location: value })
                       }
-                      className="border-gray-300 focus:border-black focus:ring-black"
                     >
-                      {teamSizes.map((size) => (
-                        <option key={size} value={size}>
-                          {size}
-                        </option>
-                      ))}
+                      <SelectTrigger className="border-gray-300 focus:border-black focus:ring-black">
+                        <SelectValue placeholder="Select location" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {locations.map((location) => (
+                          <SelectItem key={location} value={location}>
+                            {location}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
                     </Select>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="location">Your location</Label>
                     <Select
-                      value={formData.location}
+                      value={formData.teamSize}
                       onValueChange={(value) =>
-                        setFormData({ ...formData, location: value })
+                        setFormData({ ...formData, teamSize: value })
                       }
-                      className="border-gray-300 focus:border-black focus:ring-black"
                     >
-                      {locations.map((location) => (
-                        <option key={location} value={location}>
-                          {location}
-                        </option>
-                      ))}
+                      <SelectTrigger className="border-gray-300 focus:border-black focus:ring-black">
+                        <SelectValue placeholder="Select team size" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {teamSizes.map((size) => (
+                          <SelectItem key={size} value={size}>
+                            {size}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
                     </Select>
                   </div>
                 </div>
