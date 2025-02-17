@@ -7,4 +7,10 @@ const nextConfig = {
   images: { unoptimized: true },
 };
 
+module.exports = {
+  experimental: {
+    outputFileTracing: false
+  }
+}
+
 module.exports = nextConfig;

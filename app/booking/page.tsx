@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select } from "@/components/ui/select";
 import { Calendar } from "@/components/ui/calendar";
+import { InputWithError } from "@/components/ui/input-with-error";
 import {
   FiUser,
   FiMail,
@@ -265,7 +266,7 @@ export default function BookingPage() {
                           <FiUser className="w-4 h-4" />
                           Full Name
                         </Label>
-                        <Input
+                        <InputWithError
                           value={formData.fullName}
                           onChange={(e) =>
                             setFormData({
@@ -281,7 +282,7 @@ export default function BookingPage() {
                           <FiMail className="w-4 h-4" />
                           Email Address
                         </Label>
-                        <Input
+                        <InputWithError
                           type="email"
                           value={formData.email}
                           onChange={(e) =>
@@ -298,7 +299,7 @@ export default function BookingPage() {
                           <FiCreditCard className="w-4 h-4" />
                           Phone Number
                         </Label>
-                        <Input
+                        <InputWithError
                           type="tel"
                           placeholder="+1 234 567 890"
                           value={formData.phone}
@@ -371,7 +372,7 @@ export default function BookingPage() {
                       <div className="grid md:grid-cols-3 gap-4">
                         <div className="space-y-2">
                           <Label>Card Number</Label>
-                          <Input
+                          <InputWithError
                             placeholder="4242 4242 4242 4242"
                             value={formData.cardNumber}
                             onChange={(e) =>
