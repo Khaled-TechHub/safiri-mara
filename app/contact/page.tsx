@@ -320,7 +320,6 @@ export default function ContactPage() {
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );
